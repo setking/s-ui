@@ -1,0 +1,36 @@
+{
+  "name": "@sui/button",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./dist/sui-button.umd.js",
+  "module": "./dist/sui-button.mjs",
+  "types": "",
+  "exports": {
+    ".": {
+      "require": "./dist/sui-button.umd.js",
+      "module": "./dist/sui-button.mjs"
+    }
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "peerDependencies": {},
+  "devDependencies": {
+    "vue": ">=3.0.0"
+  },
+  "dependencies": {
+    "@sui/utils": "workspace:^"
+  },
+  "scripts": {
+    "build": "vite build",
+    "test": "echo test"
+  },
+  "keywords": [
+    "vue",
+    "ui",
+    "component library"
+  ],
+  "author": "sui",
+  "license": "MIT"
+}

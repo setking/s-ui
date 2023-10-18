@@ -1,0 +1,20 @@
+{
+  "name": "@sui/utils",
+  "version": "1.0.0",
+  "main": "./dist/sui-utils.umd.js",
+  "module": "./dist/sui-utils.mjs",
+  "scripts": {
+    "build": "vite build",
+    "test": "echo test"
+  },
+  "exports": {
+    ".": {
+      "require": "./dist/sui-utils.umd.js",
+      "module": "./dist/sui-utils.mjs"
+    }
+  },
+  "dependencies": {
+    "@types/lodash": "^4.14.200",
+    "lodash": "^4.17.21"
+  }
+}

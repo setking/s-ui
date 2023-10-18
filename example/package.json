@@ -1,0 +1,11 @@
+{
+  "name": "@sui/example",
+  "private": true,
+  "scripts": {
+    "dev": "vite dev"
+  },
+  "dependencies": {
+    "@sui/ui": "workspace:^"
+  },
+  "devDependencies": {}
+}

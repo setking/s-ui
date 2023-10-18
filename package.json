@@ -1,0 +1,16 @@
+{
+  "name": "s-ui",
+  "private": true,
+  "scripts": {
+    "build:ui": "pnpm --filter ./packages/** run build"
+  },
+  "devDependencies": {
+    "@vitejs/plugin-vue": "^4.4.0",
+    "sass": "^1.69.4",
+    "typescript": "^5.2.2",
+    "vite": "^4.4.11"
+  },
+  "dependencies": {
+    "vue": "^3.3.4"
+  }
+}
