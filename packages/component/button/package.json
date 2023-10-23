@@ -4,11 +4,12 @@
   "description": "",
   "main": "./dist/sui-button.umd.js",
   "module": "./dist/sui-button.mjs",
-  "types": "",
+  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
       "require": "./dist/sui-button.umd.js",
-      "module": "./dist/sui-button.mjs"
+      "module": "./dist/sui-button.mjs",
+      "types": "./dist/index.d.ts"
     }
   },
   "files": [

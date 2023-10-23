@@ -4,11 +4,12 @@
   "description": "",
   "main": "./dist/sui-input.umd.js",
   "module": "./dist/sui-input.mjs",
-  "types": "",
+  "types": "./dist/index.d.ts",
   "exports": {
     ".": {
       "require": "./dist/sui-input.umd.js",
-      "module": "./dist/sui-input.mjs"
+      "module": "./dist/sui-input.mjs",
+      "types": "./dist/index.d.ts"
     }
   },
   "files": [

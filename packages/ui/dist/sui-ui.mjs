@@ -2,7 +2,7 @@ import { defineComponent, openBlock, createElementBlock, renderSlot } from "vue"
 import lodash from "lodash";
 function hello(to = "World") {
   const txt = `Hello ${to}`;
-  alert(txt);
+  console.log(txt);
   return txt;
 }
 function useLodash() {

@@ -1,6 +1,6 @@
 <script setup lang="ts">
 import { hello } from "@sui/utils";
-const props = withDefaults(defineProps<{ modeVal?: string }>(), {
+withDefaults(defineProps<{ modeVal?: string }>(), {
   modeVal: "",
 });
 const emit = defineEmits<{ (event: "update:modeVal", val: string): void }>();

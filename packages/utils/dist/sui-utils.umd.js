@@ -4,7 +4,7 @@
   "use strict";
   function hello(to = "World") {
     const txt = `Hello ${to}`;
-    alert(txt);
+    console.log(txt);
     return txt;
   }
   function useLodash() {

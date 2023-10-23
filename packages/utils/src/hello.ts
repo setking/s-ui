@@ -1,5 +1,5 @@
 export function hello(to: string = "World") {
   const txt = `Hello ${to}`;
-  alert(txt);
+  console.log(txt);
   return txt;
 }
