@@ -1,0 +1,11 @@
+{
+  // eslint检查专用，不要包含到tsconfig文件中
+  "extends": "./tsconfig.base.json",
+  "compilerOptions": {
+    "noEmit": true
+  },
+  //   只检查不构建
+  "include": ["**/*", "**/.*.*"],
+  //   排除产物
+  "exclude": ["**/dist", "**/node_modules"]
+}

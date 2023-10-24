@@ -1,4 +1,4 @@
-import lodash from "lodash";
+import lodash from 'lodash';
 
 export function useLodash() {
   return lodash;

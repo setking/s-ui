@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-import { Button, Input } from "@sui/ui";
+import { Button, Input } from '@sui/ui';
 </script>
 <template>
   <div>

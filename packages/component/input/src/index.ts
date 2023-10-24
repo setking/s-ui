@@ -1,2 +1,3 @@
-import Input from "./index.vue";
+import Input from './index.vue';
+
 export { Input };

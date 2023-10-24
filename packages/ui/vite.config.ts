@@ -1,16 +1,17 @@
-import { defineConfig } from "vite";
+import { defineConfig } from 'vite';
+
 export default defineConfig({
   build: {
     lib: {
-      entry: "./src/index.ts",
-      name: "suiUi",
-      fileName: "sui-ui",
+      entry: './src/index.ts',
+      name: 'suiUi',
+      fileName: 'sui-ui',
     },
     rollupOptions: {
-      external: [/lodash.*/, "vue"],
+      external: [/lodash.*/, 'vue'],
       output: {
         globals: {
-          lodash: "lodash",
+          lodash: 'lodash',
         },
       },
     },
