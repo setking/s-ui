@@ -1,20 +1,4 @@
-import { defineConfig } from 'vite';
+// eslint-disable-next-line import/no-relative-packages
+import { generateConfig } from '../build/scripts';
 
-export default defineConfig({
-  build: {
-    lib: {
-      entry: './src/index.ts',
-      name: 'suiUtils',
-      fileName: 'sui-utils',
-    },
-    rollupOptions: {
-      external: [/lodash.*/],
-      output: {
-        globals: {
-          lodash: 'lodash',
-        },
-      },
-    },
-    minify: false,
-  },
-});
+export default generateConfig();

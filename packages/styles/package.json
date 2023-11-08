@@ -1,0 +1,35 @@
+{
+  "name": "@sui/styles",
+  "version": "1.0.0",
+  "main": "./dist/.umd.js",
+  "module": "./dist/sui-styles.mjs",
+  "types": "./dist/src/index.d.ts",
+  "scripts": {
+    "build:theme": "vite build --mode theme",
+    "build:unocss": "vite build --mode unocss",
+    "build": "pnpm run build:unocss && pnpm run build:theme",
+    "test": "echo test"
+  },
+  "exports": {
+    ".": {
+      "require": "./dist/.umd.js",
+      "import": "./dist/sui-styles.mjs",
+      "types": "./dist/src/index.d.ts"
+    },
+    "./preset": {
+      "require": "./dist/preset.umd.js",
+      "import": "./dist/preset.mjs",
+      "types": "./dist/src/unoPreset.d.ts"
+    },
+    "./style.css": "./dist/style.css",
+    "./*": "./*"
+  },
+  "peerDependencies": {
+    "unocss": ">=0.54.1",
+    "vue": ">=3.0.0"
+  },
+  "dependencies": {
+    "@sui/build": "workspace:^",
+    "@sui/utils": "workspace:^"
+  }
+}

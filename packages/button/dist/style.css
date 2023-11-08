@@ -1,0 +1,168 @@
+/* stylelint-disable selector-class-pattern */
+.op-button {
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--op-button-padding-y) var(--op-button-padding-x);
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1;
+  color: var(--op-button-color);
+  text-align: center;
+  white-space: nowrap;
+  cursor: pointer;
+  user-select: none;
+  background-color: var(--op-button-bg-color);
+  border-color: var(--op-button-border-color);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 4px;
+  outline: none;
+}
+.op-button:hover {
+  color: var(--op-button-hover-color);
+  background-color: var(--op-button-hover-bg-color);
+  border-color: var(--op-button-hover-border-color);
+}
+.op-button:active {
+  color: var(--op-button-active-color);
+  background-color: var(--op-button-active-bg-color);
+  border-color: var(--op-button-active-border-color);
+}
+.op-button.op-button--primary {
+  --op-button-color: rgb(var(--op-color-reverse));
+  --op-button-bg-color: rgb(var(--op-color-primary));
+  --op-button-border-color: rgb(var(--op-color-primary));
+  --op-button-hover-color: rgb(var(--op-color-reverse));
+  --op-button-hover-bg-color: rgb(var(--op-color-primary-light-3));
+  --op-button-hover-border-color: rgb(var(--op-color-primary-light-3));
+  --op-button-active-color: rgb(var(--op-color-reverse));
+  --op-button-active-bg-color: rgb(var(--op-color-primary-dark-2));
+  --op-button-active-border-color: rgb(var(--op-color-primary-dark-2));
+  --op-button-disabled-color: rgb(var(--op-color-reverse));
+  --op-button-disabled-bg-color: rgb(var(--op-color-primary-light-5));
+  --op-button-disabled-border-color: rgb(var(--op-color-primary-light-5));
+}
+.op-button.op-button--success {
+  --op-button-color: rgb(var(--op-color-reverse));
+  --op-button-bg-color: rgb(var(--op-color-success));
+  --op-button-border-color: rgb(var(--op-color-success));
+  --op-button-hover-color: rgb(var(--op-color-reverse));
+  --op-button-hover-bg-color: rgb(var(--op-color-success-light-3));
+  --op-button-hover-border-color: rgb(var(--op-color-success-light-3));
+  --op-button-active-color: rgb(var(--op-color-reverse));
+  --op-button-active-bg-color: rgb(var(--op-color-success-dark-2));
+  --op-button-active-border-color: rgb(var(--op-color-success-dark-2));
+  --op-button-disabled-color: rgb(var(--op-color-reverse));
+  --op-button-disabled-bg-color: rgb(var(--op-color-success-light-5));
+  --op-button-disabled-border-color: rgb(var(--op-color-success-light-5));
+}
+.op-button.op-button--warning {
+  --op-button-color: rgb(var(--op-color-reverse));
+  --op-button-bg-color: rgb(var(--op-color-warning));
+  --op-button-border-color: rgb(var(--op-color-warning));
+  --op-button-hover-color: rgb(var(--op-color-reverse));
+  --op-button-hover-bg-color: rgb(var(--op-color-warning-light-3));
+  --op-button-hover-border-color: rgb(var(--op-color-warning-light-3));
+  --op-button-active-color: rgb(var(--op-color-reverse));
+  --op-button-active-bg-color: rgb(var(--op-color-warning-dark-2));
+  --op-button-active-border-color: rgb(var(--op-color-warning-dark-2));
+  --op-button-disabled-color: rgb(var(--op-color-reverse));
+  --op-button-disabled-bg-color: rgb(var(--op-color-warning-light-5));
+  --op-button-disabled-border-color: rgb(var(--op-color-warning-light-5));
+}
+.op-button.op-button--danger {
+  --op-button-color: rgb(var(--op-color-reverse));
+  --op-button-bg-color: rgb(var(--op-color-danger));
+  --op-button-border-color: rgb(var(--op-color-danger));
+  --op-button-hover-color: rgb(var(--op-color-reverse));
+  --op-button-hover-bg-color: rgb(var(--op-color-danger-light-3));
+  --op-button-hover-border-color: rgb(var(--op-color-danger-light-3));
+  --op-button-active-color: rgb(var(--op-color-reverse));
+  --op-button-active-bg-color: rgb(var(--op-color-danger-dark-2));
+  --op-button-active-border-color: rgb(var(--op-color-danger-dark-2));
+  --op-button-disabled-color: rgb(var(--op-color-reverse));
+  --op-button-disabled-bg-color: rgb(var(--op-color-danger-light-5));
+  --op-button-disabled-border-color: rgb(var(--op-color-danger-light-5));
+}
+.op-button.op-button--info {
+  --op-button-color: rgb(var(--op-color-reverse));
+  --op-button-bg-color: rgb(var(--op-color-info));
+  --op-button-border-color: rgb(var(--op-color-info));
+  --op-button-hover-color: rgb(var(--op-color-reverse));
+  --op-button-hover-bg-color: rgb(var(--op-color-info-light-3));
+  --op-button-hover-border-color: rgb(var(--op-color-info-light-3));
+  --op-button-active-color: rgb(var(--op-color-reverse));
+  --op-button-active-bg-color: rgb(var(--op-color-info-dark-2));
+  --op-button-active-border-color: rgb(var(--op-color-info-dark-2));
+  --op-button-disabled-color: rgb(var(--op-color-reverse));
+  --op-button-disabled-bg-color: rgb(var(--op-color-info-light-5));
+  --op-button-disabled-border-color: rgb(var(--op-color-info-light-5));
+}
+.op-button.op-button--plain {
+  --op-button-hover-color: rgb(var(--op-color-primary));
+  --op-button-hover-bg-color: rgb(var(--op-color-card));
+  --op-button-hover-border-color: rgb(var(--color-primary));
+}
+.op-button.op-button--plain.op-button--primary {
+  --op-button-color: rgb(var(--op-color-primary));
+  --op-button-bg-color: rgb(var(--op-color-primary-light-9));
+  --op-button-border-color: rgb(var(--op-color-primary-light-5));
+  --op-button-hover-color: rgb(var(--op-color-reverse));
+  --op-button-hover-bg-color: rgb(var(--op-color-primary));
+  --op-button-hover-border-color: rgb(var(--op-color-primary));
+  --op-button-disabled-color: rgb(var(--op-color-primary-light-5));
+  --op-button-disabled-bg-color: rgb(var(--op-color-primary-light-9));
+  --op-button-disabled-border-color: rgb(var(--op-color-primary-light-8));
+}
+.op-button.op-button--plain.op-button--success {
+  --op-button-color: rgb(var(--op-color-success));
+  --op-button-bg-color: rgb(var(--op-color-success-light-9));
+  --op-button-border-color: rgb(var(--op-color-success-light-5));
+  --op-button-hover-color: rgb(var(--op-color-reverse));
+  --op-button-hover-bg-color: rgb(var(--op-color-success));
+  --op-button-hover-border-color: rgb(var(--op-color-success));
+  --op-button-disabled-color: rgb(var(--op-color-success-light-5));
+  --op-button-disabled-bg-color: rgb(var(--op-color-success-light-9));
+  --op-button-disabled-border-color: rgb(var(--op-color-success-light-8));
+}
+.op-button.op-button--plain.op-button--warning {
+  --op-button-color: rgb(var(--op-color-warning));
+  --op-button-bg-color: rgb(var(--op-color-warning-light-9));
+  --op-button-border-color: rgb(var(--op-color-warning-light-5));
+  --op-button-hover-color: rgb(var(--op-color-reverse));
+  --op-button-hover-bg-color: rgb(var(--op-color-warning));
+  --op-button-hover-border-color: rgb(var(--op-color-warning));
+  --op-button-disabled-color: rgb(var(--op-color-warning-light-5));
+  --op-button-disabled-bg-color: rgb(var(--op-color-warning-light-9));
+  --op-button-disabled-border-color: rgb(var(--op-color-warning-light-8));
+}
+.op-button.op-button--plain.op-button--danger {
+  --op-button-color: rgb(var(--op-color-danger));
+  --op-button-bg-color: rgb(var(--op-color-danger-light-9));
+  --op-button-border-color: rgb(var(--op-color-danger-light-5));
+  --op-button-hover-color: rgb(var(--op-color-reverse));
+  --op-button-hover-bg-color: rgb(var(--op-color-danger));
+  --op-button-hover-border-color: rgb(var(--op-color-danger));
+  --op-button-disabled-color: rgb(var(--op-color-danger-light-5));
+  --op-button-disabled-bg-color: rgb(var(--op-color-danger-light-9));
+  --op-button-disabled-border-color: rgb(var(--op-color-danger-light-8));
+}
+.op-button.op-button--plain.op-button--info {
+  --op-button-color: rgb(var(--op-color-info));
+  --op-button-bg-color: rgb(var(--op-color-info-light-9));
+  --op-button-border-color: rgb(var(--op-color-info-light-5));
+  --op-button-hover-color: rgb(var(--op-color-reverse));
+  --op-button-hover-bg-color: rgb(var(--op-color-info));
+  --op-button-hover-border-color: rgb(var(--op-color-info));
+  --op-button-disabled-color: rgb(var(--op-color-info-light-5));
+  --op-button-disabled-bg-color: rgb(var(--op-color-info-light-9));
+  --op-button-disabled-border-color: rgb(var(--op-color-info-light-8));
+}
+.op-button.op-button--disabled, .op-button.op-button--disabled:hover, .op-button.op-button--disabled:active {
+  color: var(--op-button-disabled-color);
+  cursor: not-allowed;
+  background-color: var(--op-button-disabled-bg-color);
+  border-color: var(--op-button-disabled-border-color);
+} :root{--op-button-color: rgba(var(--op-color-regular),1);--op-button-bg-color: rgba(var(--op-color-card),1);--op-button-border-color: rgba(var(--op-color-bd_base),1);--op-button-hover-color: rgba(var(--op-color-primary),1);--op-button-hover-bg-color: rgba(var(--op-color-primary-light-9),1);--op-button-hover-border-color: rgba(var(--op-color-primary-light-7),1);--op-button-active-color: rgba(var(--op-color-primary),1);--op-button-active-bg-color: rgba(var(--op-color-primary-light-9),1);--op-button-active-border-color: rgba(var(--op-color-primary),1);--op-button-disabled-color: rgba(var(--op-color-placeholder),1);--op-button-disabled-bg-color: rgba(var(--op-color-card),1);--op-button-disabled-border-color: rgba(var(--op-color-bd_light),1);--op-button-padding-x: var(--op-spacing-md);--op-button-padding-y: var(--op-spacing-xs);} 

@@ -1,0 +1,324 @@
+/* stylelint-disable selector-class-pattern */
+.op-button {
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--op-button-padding-y) var(--op-button-padding-x);
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1;
+  color: var(--op-button-color);
+  text-align: center;
+  white-space: nowrap;
+  cursor: pointer;
+  user-select: none;
+  background-color: var(--op-button-bg-color);
+  border-color: var(--op-button-border-color);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 4px;
+  outline: none;
+}
+.op-button:hover {
+  color: var(--op-button-hover-color);
+  background-color: var(--op-button-hover-bg-color);
+  border-color: var(--op-button-hover-border-color);
+}
+.op-button:active {
+  color: var(--op-button-active-color);
+  background-color: var(--op-button-active-bg-color);
+  border-color: var(--op-button-active-border-color);
+}
+.op-button.op-button--primary {
+  --op-button-color: rgb(var(--op-color-reverse));
+  --op-button-bg-color: rgb(var(--op-color-primary));
+  --op-button-border-color: rgb(var(--op-color-primary));
+  --op-button-hover-color: rgb(var(--op-color-reverse));
+  --op-button-hover-bg-color: rgb(var(--op-color-primary-light-3));
+  --op-button-hover-border-color: rgb(var(--op-color-primary-light-3));
+  --op-button-active-color: rgb(var(--op-color-reverse));
+  --op-button-active-bg-color: rgb(var(--op-color-primary-dark-2));
+  --op-button-active-border-color: rgb(var(--op-color-primary-dark-2));
+  --op-button-disabled-color: rgb(var(--op-color-reverse));
+  --op-button-disabled-bg-color: rgb(var(--op-color-primary-light-5));
+  --op-button-disabled-border-color: rgb(var(--op-color-primary-light-5));
+}
+.op-button.op-button--success {
+  --op-button-color: rgb(var(--op-color-reverse));
+  --op-button-bg-color: rgb(var(--op-color-success));
+  --op-button-border-color: rgb(var(--op-color-success));
+  --op-button-hover-color: rgb(var(--op-color-reverse));
+  --op-button-hover-bg-color: rgb(var(--op-color-success-light-3));
+  --op-button-hover-border-color: rgb(var(--op-color-success-light-3));
+  --op-button-active-color: rgb(var(--op-color-reverse));
+  --op-button-active-bg-color: rgb(var(--op-color-success-dark-2));
+  --op-button-active-border-color: rgb(var(--op-color-success-dark-2));
+  --op-button-disabled-color: rgb(var(--op-color-reverse));
+  --op-button-disabled-bg-color: rgb(var(--op-color-success-light-5));
+  --op-button-disabled-border-color: rgb(var(--op-color-success-light-5));
+}
+.op-button.op-button--warning {
+  --op-button-color: rgb(var(--op-color-reverse));
+  --op-button-bg-color: rgb(var(--op-color-warning));
+  --op-button-border-color: rgb(var(--op-color-warning));
+  --op-button-hover-color: rgb(var(--op-color-reverse));
+  --op-button-hover-bg-color: rgb(var(--op-color-warning-light-3));
+  --op-button-hover-border-color: rgb(var(--op-color-warning-light-3));
+  --op-button-active-color: rgb(var(--op-color-reverse));
+  --op-button-active-bg-color: rgb(var(--op-color-warning-dark-2));
+  --op-button-active-border-color: rgb(var(--op-color-warning-dark-2));
+  --op-button-disabled-color: rgb(var(--op-color-reverse));
+  --op-button-disabled-bg-color: rgb(var(--op-color-warning-light-5));
+  --op-button-disabled-border-color: rgb(var(--op-color-warning-light-5));
+}
+.op-button.op-button--danger {
+  --op-button-color: rgb(var(--op-color-reverse));
+  --op-button-bg-color: rgb(var(--op-color-danger));
+  --op-button-border-color: rgb(var(--op-color-danger));
+  --op-button-hover-color: rgb(var(--op-color-reverse));
+  --op-button-hover-bg-color: rgb(var(--op-color-danger-light-3));
+  --op-button-hover-border-color: rgb(var(--op-color-danger-light-3));
+  --op-button-active-color: rgb(var(--op-color-reverse));
+  --op-button-active-bg-color: rgb(var(--op-color-danger-dark-2));
+  --op-button-active-border-color: rgb(var(--op-color-danger-dark-2));
+  --op-button-disabled-color: rgb(var(--op-color-reverse));
+  --op-button-disabled-bg-color: rgb(var(--op-color-danger-light-5));
+  --op-button-disabled-border-color: rgb(var(--op-color-danger-light-5));
+}
+.op-button.op-button--info {
+  --op-button-color: rgb(var(--op-color-reverse));
+  --op-button-bg-color: rgb(var(--op-color-info));
+  --op-button-border-color: rgb(var(--op-color-info));
+  --op-button-hover-color: rgb(var(--op-color-reverse));
+  --op-button-hover-bg-color: rgb(var(--op-color-info-light-3));
+  --op-button-hover-border-color: rgb(var(--op-color-info-light-3));
+  --op-button-active-color: rgb(var(--op-color-reverse));
+  --op-button-active-bg-color: rgb(var(--op-color-info-dark-2));
+  --op-button-active-border-color: rgb(var(--op-color-info-dark-2));
+  --op-button-disabled-color: rgb(var(--op-color-reverse));
+  --op-button-disabled-bg-color: rgb(var(--op-color-info-light-5));
+  --op-button-disabled-border-color: rgb(var(--op-color-info-light-5));
+}
+.op-button.op-button--plain {
+  --op-button-hover-color: rgb(var(--op-color-primary));
+  --op-button-hover-bg-color: rgb(var(--op-color-card));
+  --op-button-hover-border-color: rgb(var(--color-primary));
+}
+.op-button.op-button--plain.op-button--primary {
+  --op-button-color: rgb(var(--op-color-primary));
+  --op-button-bg-color: rgb(var(--op-color-primary-light-9));
+  --op-button-border-color: rgb(var(--op-color-primary-light-5));
+  --op-button-hover-color: rgb(var(--op-color-reverse));
+  --op-button-hover-bg-color: rgb(var(--op-color-primary));
+  --op-button-hover-border-color: rgb(var(--op-color-primary));
+  --op-button-disabled-color: rgb(var(--op-color-primary-light-5));
+  --op-button-disabled-bg-color: rgb(var(--op-color-primary-light-9));
+  --op-button-disabled-border-color: rgb(var(--op-color-primary-light-8));
+}
+.op-button.op-button--plain.op-button--success {
+  --op-button-color: rgb(var(--op-color-success));
+  --op-button-bg-color: rgb(var(--op-color-success-light-9));
+  --op-button-border-color: rgb(var(--op-color-success-light-5));
+  --op-button-hover-color: rgb(var(--op-color-reverse));
+  --op-button-hover-bg-color: rgb(var(--op-color-success));
+  --op-button-hover-border-color: rgb(var(--op-color-success));
+  --op-button-disabled-color: rgb(var(--op-color-success-light-5));
+  --op-button-disabled-bg-color: rgb(var(--op-color-success-light-9));
+  --op-button-disabled-border-color: rgb(var(--op-color-success-light-8));
+}
+.op-button.op-button--plain.op-button--warning {
+  --op-button-color: rgb(var(--op-color-warning));
+  --op-button-bg-color: rgb(var(--op-color-warning-light-9));
+  --op-button-border-color: rgb(var(--op-color-warning-light-5));
+  --op-button-hover-color: rgb(var(--op-color-reverse));
+  --op-button-hover-bg-color: rgb(var(--op-color-warning));
+  --op-button-hover-border-color: rgb(var(--op-color-warning));
+  --op-button-disabled-color: rgb(var(--op-color-warning-light-5));
+  --op-button-disabled-bg-color: rgb(var(--op-color-warning-light-9));
+  --op-button-disabled-border-color: rgb(var(--op-color-warning-light-8));
+}
+.op-button.op-button--plain.op-button--danger {
+  --op-button-color: rgb(var(--op-color-danger));
+  --op-button-bg-color: rgb(var(--op-color-danger-light-9));
+  --op-button-border-color: rgb(var(--op-color-danger-light-5));
+  --op-button-hover-color: rgb(var(--op-color-reverse));
+  --op-button-hover-bg-color: rgb(var(--op-color-danger));
+  --op-button-hover-border-color: rgb(var(--op-color-danger));
+  --op-button-disabled-color: rgb(var(--op-color-danger-light-5));
+  --op-button-disabled-bg-color: rgb(var(--op-color-danger-light-9));
+  --op-button-disabled-border-color: rgb(var(--op-color-danger-light-8));
+}
+.op-button.op-button--plain.op-button--info {
+  --op-button-color: rgb(var(--op-color-info));
+  --op-button-bg-color: rgb(var(--op-color-info-light-9));
+  --op-button-border-color: rgb(var(--op-color-info-light-5));
+  --op-button-hover-color: rgb(var(--op-color-reverse));
+  --op-button-hover-bg-color: rgb(var(--op-color-info));
+  --op-button-hover-border-color: rgb(var(--op-color-info));
+  --op-button-disabled-color: rgb(var(--op-color-info-light-5));
+  --op-button-disabled-bg-color: rgb(var(--op-color-info-light-9));
+  --op-button-disabled-border-color: rgb(var(--op-color-info-light-8));
+}
+.op-button.op-button--disabled, .op-button.op-button--disabled:hover, .op-button.op-button--disabled:active {
+  color: var(--op-button-disabled-color);
+  cursor: not-allowed;
+  background-color: var(--op-button-disabled-bg-color);
+  border-color: var(--op-button-disabled-border-color);
+} :root{--op-button-color: rgba(var(--op-color-regular),1);--op-button-bg-color: rgba(var(--op-color-card),1);--op-button-border-color: rgba(var(--op-color-bd_base),1);--op-button-hover-color: rgba(var(--op-color-primary),1);--op-button-hover-bg-color: rgba(var(--op-color-primary-light-9),1);--op-button-hover-border-color: rgba(var(--op-color-primary-light-7),1);--op-button-active-color: rgba(var(--op-color-primary),1);--op-button-active-bg-color: rgba(var(--op-color-primary-light-9),1);--op-button-active-border-color: rgba(var(--op-color-primary),1);--op-button-disabled-color: rgba(var(--op-color-placeholder),1);--op-button-disabled-bg-color: rgba(var(--op-color-card),1);--op-button-disabled-border-color: rgba(var(--op-color-bd_light),1);--op-button-padding-x: var(--op-spacing-md);--op-button-padding-y: var(--op-spacing-xs);} /* stylelint-disable selector-class-pattern */
+.op-input {
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--op-input-padding-y) var(--op-input-padding-x);
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1;
+  color: var(--op-input-color);
+  text-align: center;
+  white-space: nowrap;
+  user-select: none;
+  background-color: var(--op-input-bg-color);
+  border-color: var(--op-input-border-color);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 2px;
+  outline: none;
+}
+.op-input.op-input--primary {
+  --op-input-color: rgb(var(--op-color-reverse));
+  --op-input-bg-color: rgb(var(--op-color-primary));
+  --op-input-border-color: rgb(var(--op-color-primary));
+  --op-input-hover-color: rgb(var(--op-color-reverse));
+  --op-input-hover-bg-color: rgb(var(--op-color-primary-light-3));
+  --op-input-hover-border-color: rgb(var(--op-color-primary-light-3));
+  --op-input-active-color: rgb(var(--op-color-reverse));
+  --op-input-active-bg-color: rgb(var(--op-color-primary-dark-2));
+  --op-input-active-border-color: rgb(var(--op-color-primary-dark-2));
+  --op-input-disabled-color: rgb(var(--op-color-reverse));
+  --op-input-disabled-bg-color: rgb(var(--op-color-primary-light-5));
+  --op-input-disabled-border-color: rgb(var(--op-color-primary-light-5));
+}
+.op-input.op-input--success {
+  --op-input-color: rgb(var(--op-color-reverse));
+  --op-input-bg-color: rgb(var(--op-color-success));
+  --op-input-border-color: rgb(var(--op-color-success));
+  --op-input-hover-color: rgb(var(--op-color-reverse));
+  --op-input-hover-bg-color: rgb(var(--op-color-success-light-3));
+  --op-input-hover-border-color: rgb(var(--op-color-success-light-3));
+  --op-input-active-color: rgb(var(--op-color-reverse));
+  --op-input-active-bg-color: rgb(var(--op-color-success-dark-2));
+  --op-input-active-border-color: rgb(var(--op-color-success-dark-2));
+  --op-input-disabled-color: rgb(var(--op-color-reverse));
+  --op-input-disabled-bg-color: rgb(var(--op-color-success-light-5));
+  --op-input-disabled-border-color: rgb(var(--op-color-success-light-5));
+}
+.op-input.op-input--warning {
+  --op-input-color: rgb(var(--op-color-reverse));
+  --op-input-bg-color: rgb(var(--op-color-warning));
+  --op-input-border-color: rgb(var(--op-color-warning));
+  --op-input-hover-color: rgb(var(--op-color-reverse));
+  --op-input-hover-bg-color: rgb(var(--op-color-warning-light-3));
+  --op-input-hover-border-color: rgb(var(--op-color-warning-light-3));
+  --op-input-active-color: rgb(var(--op-color-reverse));
+  --op-input-active-bg-color: rgb(var(--op-color-warning-dark-2));
+  --op-input-active-border-color: rgb(var(--op-color-warning-dark-2));
+  --op-input-disabled-color: rgb(var(--op-color-reverse));
+  --op-input-disabled-bg-color: rgb(var(--op-color-warning-light-5));
+  --op-input-disabled-border-color: rgb(var(--op-color-warning-light-5));
+}
+.op-input.op-input--danger {
+  --op-input-color: rgb(var(--op-color-reverse));
+  --op-input-bg-color: rgb(var(--op-color-danger));
+  --op-input-border-color: rgb(var(--op-color-danger));
+  --op-input-hover-color: rgb(var(--op-color-reverse));
+  --op-input-hover-bg-color: rgb(var(--op-color-danger-light-3));
+  --op-input-hover-border-color: rgb(var(--op-color-danger-light-3));
+  --op-input-active-color: rgb(var(--op-color-reverse));
+  --op-input-active-bg-color: rgb(var(--op-color-danger-dark-2));
+  --op-input-active-border-color: rgb(var(--op-color-danger-dark-2));
+  --op-input-disabled-color: rgb(var(--op-color-reverse));
+  --op-input-disabled-bg-color: rgb(var(--op-color-danger-light-5));
+  --op-input-disabled-border-color: rgb(var(--op-color-danger-light-5));
+}
+.op-input.op-input--info {
+  --op-input-color: rgb(var(--op-color-reverse));
+  --op-input-bg-color: rgb(var(--op-color-info));
+  --op-input-border-color: rgb(var(--op-color-info));
+  --op-input-hover-color: rgb(var(--op-color-reverse));
+  --op-input-hover-bg-color: rgb(var(--op-color-info-light-3));
+  --op-input-hover-border-color: rgb(var(--op-color-info-light-3));
+  --op-input-active-color: rgb(var(--op-color-reverse));
+  --op-input-active-bg-color: rgb(var(--op-color-info-dark-2));
+  --op-input-active-border-color: rgb(var(--op-color-info-dark-2));
+  --op-input-disabled-color: rgb(var(--op-color-reverse));
+  --op-input-disabled-bg-color: rgb(var(--op-color-info-light-5));
+  --op-input-disabled-border-color: rgb(var(--op-color-info-light-5));
+}
+.op-input.op-input--plain {
+  --op-input-hover-color: rgb(var(--op-color-primary));
+  --op-input-hover-bg-color: rgb(var(--op-color-card));
+  --op-input-hover-border-color: rgb(var(--color-primary));
+}
+.op-input.op-input--plain.op-input--primary {
+  --op-input-color: rgb(var(--op-color-primary));
+  --op-input-bg-color: rgb(var(--op-color-primary-light-9));
+  --op-input-border-color: rgb(var(--op-color-primary-light-5));
+  --op-input-hover-color: rgb(var(--op-color-reverse));
+  --op-input-hover-bg-color: rgb(var(--op-color-primary));
+  --op-input-hover-border-color: rgb(var(--op-color-primary));
+  --op-input-disabled-color: rgb(var(--op-color-primary-light-5));
+  --op-input-disabled-bg-color: rgb(var(--op-color-primary-light-9));
+  --op-input-disabled-border-color: rgb(var(--op-color-primary-light-8));
+}
+.op-input.op-input--plain.op-input--success {
+  --op-input-color: rgb(var(--op-color-success));
+  --op-input-bg-color: rgb(var(--op-color-success-light-9));
+  --op-input-border-color: rgb(var(--op-color-success-light-5));
+  --op-input-hover-color: rgb(var(--op-color-reverse));
+  --op-input-hover-bg-color: rgb(var(--op-color-success));
+  --op-input-hover-border-color: rgb(var(--op-color-success));
+  --op-input-disabled-color: rgb(var(--op-color-success-light-5));
+  --op-input-disabled-bg-color: rgb(var(--op-color-success-light-9));
+  --op-input-disabled-border-color: rgb(var(--op-color-success-light-8));
+}
+.op-input.op-input--plain.op-input--warning {
+  --op-input-color: rgb(var(--op-color-warning));
+  --op-input-bg-color: rgb(var(--op-color-warning-light-9));
+  --op-input-border-color: rgb(var(--op-color-warning-light-5));
+  --op-input-hover-color: rgb(var(--op-color-reverse));
+  --op-input-hover-bg-color: rgb(var(--op-color-warning));
+  --op-input-hover-border-color: rgb(var(--op-color-warning));
+  --op-input-disabled-color: rgb(var(--op-color-warning-light-5));
+  --op-input-disabled-bg-color: rgb(var(--op-color-warning-light-9));
+  --op-input-disabled-border-color: rgb(var(--op-color-warning-light-8));
+}
+.op-input.op-input--plain.op-input--danger {
+  --op-input-color: rgb(var(--op-color-danger));
+  --op-input-bg-color: rgb(var(--op-color-danger-light-9));
+  --op-input-border-color: rgb(var(--op-color-danger-light-5));
+  --op-input-hover-color: rgb(var(--op-color-reverse));
+  --op-input-hover-bg-color: rgb(var(--op-color-danger));
+  --op-input-hover-border-color: rgb(var(--op-color-danger));
+  --op-input-disabled-color: rgb(var(--op-color-danger-light-5));
+  --op-input-disabled-bg-color: rgb(var(--op-color-danger-light-9));
+  --op-input-disabled-border-color: rgb(var(--op-color-danger-light-8));
+}
+.op-input.op-input--plain.op-input--info {
+  --op-input-color: rgb(var(--op-color-info));
+  --op-input-bg-color: rgb(var(--op-color-info-light-9));
+  --op-input-border-color: rgb(var(--op-color-info-light-5));
+  --op-input-hover-color: rgb(var(--op-color-reverse));
+  --op-input-hover-bg-color: rgb(var(--op-color-info));
+  --op-input-hover-border-color: rgb(var(--op-color-info));
+  --op-input-disabled-color: rgb(var(--op-color-info-light-5));
+  --op-input-disabled-bg-color: rgb(var(--op-color-info-light-9));
+  --op-input-disabled-border-color: rgb(var(--op-color-info-light-8));
+}
+.op-input.op-input--disabled, .op-input.op-input--disabled:hover {
+  color: var(--op-input-disabled-color);
+  cursor: not-allowed;
+  background-color: var(--op-input-disabled-bg-color);
+  border-color: var(--op-input-disabled-border-color);
+}   :root{--op-color-primary: 199, 0, 11;--op-color-primary-light-1: 205, 26, 35;--op-color-primary-dark-1: 179, 0, 10;--op-color-primary-light-2: 210, 51, 60;--op-color-primary-dark-2: 159, 0, 9;--op-color-primary-light-3: 216, 77, 84;--op-color-primary-dark-3: 139, 0, 8;--op-color-primary-light-4: 221, 102, 109;--op-color-primary-dark-4: 119, 0, 7;--op-color-primary-light-5: 227, 128, 133;--op-color-primary-dark-5: 100, 0, 6;--op-color-primary-light-6: 233, 153, 157;--op-color-primary-dark-6: 80, 0, 4;--op-color-primary-light-7: 238, 179, 182;--op-color-primary-dark-7: 60, 0, 3;--op-color-primary-light-8: 244, 204, 206;--op-color-primary-dark-8: 40, 0, 2;--op-color-primary-light-9: 249, 230, 231;--op-color-primary-dark-9: 20, 0, 1;--op-color-success: 80, 212, 171;--op-color-success-light-1: 98, 216, 179;--op-color-success-dark-1: 72, 191, 154;--op-color-success-light-2: 115, 221, 188;--op-color-success-dark-2: 64, 170, 137;--op-color-success-light-3: 133, 225, 196;--op-color-success-dark-3: 56, 148, 120;--op-color-success-light-4: 150, 229, 205;--op-color-success-dark-4: 48, 127, 103;--op-color-success-light-5: 168, 234, 213;--op-color-success-dark-5: 40, 106, 86;--op-color-success-light-6: 185, 238, 221;--op-color-success-dark-6: 32, 85, 68;--op-color-success-light-7: 203, 242, 230;--op-color-success-dark-7: 24, 64, 51;--op-color-success-light-8: 220, 246, 238;--op-color-success-dark-8: 16, 42, 34;--op-color-success-light-9: 238, 251, 247;--op-color-success-dark-9: 8, 21, 17;--op-color-warning: 251, 177, 117;--op-color-warning-light-1: 251, 185, 131;--op-color-warning-dark-1: 226, 159, 105;--op-color-warning-light-2: 252, 193, 145;--op-color-warning-dark-2: 201, 142, 94;--op-color-warning-light-3: 252, 200, 158;--op-color-warning-dark-3: 176, 124, 82;--op-color-warning-light-4: 253, 208, 172;--op-color-warning-dark-4: 151, 106, 70;--op-color-warning-light-5: 253, 216, 186;--op-color-warning-dark-5: 126, 89, 59;--op-color-warning-light-6: 253, 224, 200;--op-color-warning-dark-6: 100, 71, 47;--op-color-warning-light-7: 254, 232, 214;--op-color-warning-dark-7: 75, 53, 35;--op-color-warning-light-8: 254, 239, 227;--op-color-warning-dark-8: 50, 35, 23;--op-color-warning-light-9: 255, 247, 241;--op-color-warning-dark-9: 25, 18, 12;--op-color-danger: 246, 111, 106;--op-color-danger-light-1: 247, 125, 121;--op-color-danger-dark-1: 221, 100, 95;--op-color-danger-light-2: 248, 140, 136;--op-color-danger-dark-2: 197, 89, 85;--op-color-danger-light-3: 249, 154, 151;--op-color-danger-dark-3: 172, 78, 74;--op-color-danger-light-4: 250, 169, 166;--op-color-danger-dark-4: 148, 67, 64;--op-color-danger-light-5: 251, 183, 181;--op-color-danger-dark-5: 123, 56, 53;--op-color-danger-light-6: 251, 197, 195;--op-color-danger-dark-6: 98, 44, 42;--op-color-danger-light-7: 252, 212, 210;--op-color-danger-dark-7: 74, 33, 32;--op-color-danger-light-8: 253, 226, 225;--op-color-danger-dark-8: 49, 22, 21;--op-color-danger-light-9: 254, 241, 240;--op-color-danger-dark-9: 25, 11, 11;--op-color-info: 82, 110, 204;--op-color-info-light-1: 99, 125, 209;--op-color-info-dark-1: 74, 99, 184;--op-color-info-light-2: 117, 139, 214;--op-color-info-dark-2: 66, 88, 163;--op-color-info-light-3: 134, 154, 219;--op-color-info-dark-3: 57, 77, 143;--op-color-info-light-4: 151, 168, 224;--op-color-info-dark-4: 49, 66, 122;--op-color-info-light-5: 169, 183, 230;--op-color-info-dark-5: 41, 55, 102;--op-color-info-light-6: 186, 197, 235;--op-color-info-dark-6: 33, 44, 82;--op-color-info-light-7: 203, 212, 240;--op-color-info-dark-7: 25, 33, 61;--op-color-info-light-8: 220, 226, 245;--op-color-info-dark-8: 16, 22, 41;--op-color-info-light-9: 238, 241, 250;--op-color-info-dark-9: 8, 11, 20;--op-color-transparent: transparent;--op-color-black: 0, 0, 0;--op-color-white: 255, 255, 255;--op-color-page: 245, 245, 246;--op-color-card: 255, 255, 255;--op-color-header: 37, 43, 58;--op-color-regular: 87, 93, 108;--op-color-secondary: 138, 142, 153;--op-color-placeholder: 171, 176, 184;--op-color-disabled: 192, 196, 204;--op-color-reverse: 255, 255, 255;--op-color-bd_darker: 205, 208, 214;--op-color-bd_dark: 212, 215, 222;--op-color-bd_base: 220, 223, 230;--op-color-bd_light: 223, 225, 230;--op-color-bd_lighter: 235, 239, 245;--op-color-bd_lightest: 242, 246, 252;--op-spacing-xs: 8px;--op-spacing-sm: 12px;--op-spacing-md: 16px;--op-spacing-lg: 24px;--op-spacing-xl: 32px;} 

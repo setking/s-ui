@@ -1,0 +1,76 @@
+/* stylelint-disable selector-class-pattern */
+$input-types: primary, success, warning, danger, info;
+
+@mixin input-type-styles() {
+  @each $type in $input-types {
+    &.op-input--#{$type} {
+      --op-input-color: rgb(var(--op-color-reverse));
+      --op-input-bg-color: rgb(var(--op-color-#{$type}));
+      --op-input-border-color: rgb(var(--op-color-#{$type}));
+      --op-input-hover-color: rgb(var(--op-color-reverse));
+      --op-input-hover-bg-color: rgb(var(--op-color-#{$type}-light-3));
+      --op-input-hover-border-color: rgb(var(--op-color-#{$type}-light-3));
+      --op-input-active-color: rgb(var(--op-color-reverse));
+      --op-input-active-bg-color: rgb(var(--op-color-#{$type}-dark-2));
+      --op-input-active-border-color: rgb(var(--op-color-#{$type}-dark-2));
+      --op-input-disabled-color: rgb(var(--op-color-reverse));
+      --op-input-disabled-bg-color: rgb(var(--op-color-#{$type}-light-5));
+      --op-input-disabled-border-color: rgb(var(--op-color-#{$type}-light-5));
+    }
+  }
+}
+
+@mixin input-plain-styles() {
+  @each $type in $input-types {
+    &.op-input--#{$type} {
+      --op-input-color: rgb(var(--op-color-#{$type}));
+      --op-input-bg-color: rgb(var(--op-color-#{$type}-light-9));
+      --op-input-border-color: rgb(var(--op-color-#{$type}-light-5));
+      --op-input-hover-color: rgb(var(--op-color-reverse));
+      --op-input-hover-bg-color: rgb(var(--op-color-#{$type}));
+      --op-input-hover-border-color: rgb(var(--op-color-#{$type}));
+      --op-input-disabled-color: rgb(var(--op-color-#{$type}-light-5));
+      --op-input-disabled-bg-color: rgb(var(--op-color-#{$type}-light-9));
+      --op-input-disabled-border-color: rgb(var(--op-color-#{$type}-light-8));
+    }
+  }
+}
+
+.op-input {
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--op-input-padding-y) var(--op-input-padding-x);
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1;
+  color: var(--op-input-color);
+  text-align: center;
+  white-space: nowrap;
+  user-select: none;
+  background-color: var(--op-input-bg-color);
+  border-color: var(--op-input-border-color);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 2px;
+  outline: none;
+
+  @include input-type-styles;
+
+  &.op-input--plain {
+    --op-input-hover-color: rgb(var(--op-color-primary));
+    --op-input-hover-bg-color: rgb(var(--op-color-card));
+    --op-input-hover-border-color: rgb(var(--color-primary));
+
+    @include input-plain-styles;
+  }
+
+  &.op-input--disabled,
+  &.op-input--disabled:hover {
+    color: var(--op-input-disabled-color);
+    cursor: not-allowed;
+    background-color: var(--op-input-disabled-bg-color);
+    border-color: var(--op-input-disabled-border-color);
+  }
+}

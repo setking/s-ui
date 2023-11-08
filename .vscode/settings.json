@@ -55,5 +55,6 @@
   "editor.tabSize": 2,
 
   // 自动补充闭合的 HTML 标签
-  "html.autoClosingTags": true
+  "html.autoClosingTags": true,
+  "cSpell.words": ["iconify", "unocss"]
 }

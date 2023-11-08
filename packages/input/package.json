@@ -1,0 +1,47 @@
+{
+  "name": "@sui/input",
+  "version": "1.0.0",
+  "description": "",
+  "main": "./dist/.umd.js",
+  "module": "./dist/sui-input.mjs",
+  "types": "./dist/src/index.d.ts",
+  "exports": {
+    ".": {
+      "require": "./dist/.umd.js",
+      "import": "./dist/sui-input.mjs",
+      "types": "./dist/src/index.d.ts"
+    },
+    "./*": "./*",
+    "./style.css": "./dist/style.css"
+  },
+  "files": [
+    "dist",
+    "README.md"
+  ],
+  "devDependencies": {
+    "vue": "^3.3.7"
+  },
+  "dependencies": {
+    "@sui/utils": "workspace:^"
+  },
+  "scripts": {
+    "build": "vite build",
+    "test": "echo test"
+  },
+  "keywords": [
+    "vue",
+    "ui",
+    "component library"
+  ],
+  "author": "sui",
+  "license": "MIT",
+  "homepage": "https://github.com/setking/s-ui/blob/master/README.md",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/setking/s-ui.git"
+  },
+  "bugs": {
+    "url": "https://github.com/setking/s-ui/issues"
+  },
+  "mode": "./dist/sui-input.mjs"
+}

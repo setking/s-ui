@@ -1,25 +1,34 @@
 {
   "name": "@sui/ui",
   "version": "1.0.0",
-  "main": "./dist/sui-ui.umd.js",
+  "main": "./dist/.umd.js",
   "module": "./dist/sui-ui.mjs",
-  "types": "./dist/index.d.ts",
+  "types": "./dist/src/index.d.ts",
   "scripts": {
-    "build": "vite build",
+    "build:package": "vite build --mode package",
+    "build:full": "vite build --mode full",
+    "build:full-min": "vite build --mode full-min",
+    "build": "pnpm run build:package && pnpm run build:full && pnpm run build:full-min",
     "test": "echo test"
   },
   "exports": {
     ".": {
-      "require": "./dist/sui-ui.umd.js",
-      "module": "./dist/sui-ui.mjs",
-      "types": "./dist/index.d.ts"
-    }
+      "require": "./dist/.umd.js",
+      "import": "./dist/sui-ui.mjs",
+      "types": "./dist/src/index.d.ts"
+    },
+    "./*": "./*",
+    "./style/*": "./dist/style/*"
   },
   "dependencies": {
+    "@sui/build": "workspace:^",
     "@sui/button": "workspace:^",
+    "@sui/config-provider": "workspace:^",
     "@sui/input": "workspace:^",
+    "@sui/styles": "workspace:^",
     "@sui/utils": "workspace:^",
     "@types/lodash": "^4.14.200",
     "lodash": "^4.17.21"
-  }
+  },
+  "mode": "./dist/sui-ui.mjs"
 }

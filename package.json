@@ -7,29 +7,29 @@
     "clean:type": "rimraf ./dist",
     "type:node": "tsc -p tsconfig.node.json --noEmit --composite false",
     "type:src": "pnpm run clean:type && vue-tsc -p tsconfig.src.json --composite false --declaration --emitDeclarationOnly",
-    "mv-type": "tsx ./scripts/dts-mv.ts",
-    "build:ui": "pnpm run type:src && pnpm --filter ./packages/** run build && pnpm run mv-type",
+    "build:ui": "pnpm run type:src && pnpm --filter ./packages/** run build",
     "lint:script": "eslint --ext .js,.jsx,.ts,.tsx,.vue --fix ./",
     "lint:style": "stylelint --fix ./**/*.{css,scss,vue,html}"
   },
   "devDependencies": {
-    "@commitlint/cli": "^18.0.0",
-    "@commitlint/config-conventional": "^18.0.0",
-    "@types/node": "^20.8.7",
-    "@typescript-eslint/eslint-plugin": "^6.9.0",
-    "@typescript-eslint/parser": "^6.9.0",
+    "@commitlint/cli": "^18.2.0",
+    "@commitlint/config-conventional": "^18.1.0",
+    "@types/node": "^20.8.9",
+    "@typescript-eslint/eslint-plugin": "^6.9.1",
+    "@typescript-eslint/parser": "^6.9.1",
+    "@unocss/transformer-directives": "^0.57.1",
     "@vitejs/plugin-vue": "^4.4.0",
     "eslint": "^8.52.0",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-airbnb-typescript": "^17.1.0",
     "eslint-define-config": "^1.24.1",
     "eslint-plugin-import": "^2.29.0",
-    "eslint-plugin-vue": "^9.17.0",
+    "eslint-plugin-vue": "^9.18.1",
     "husky": "^8.0.3",
     "lint-staged": "^15.0.2",
     "prettier": "^3.0.3",
     "rimraf": "^5.0.5",
-    "sass": "^1.69.4",
+    "sass": "^1.69.5",
     "stylelint": "^15.11.0",
     "stylelint-config-recess-order": "^4.3.0",
     "stylelint-config-recommended-vue": "^1.5.0",
@@ -37,11 +37,12 @@
     "stylelint-stylistic": "^0.4.3",
     "tsx": "^3.14.0",
     "typescript": "^5.2.2",
-    "vite": "^4.4.11",
+    "unocss": "^0.57.1",
+    "vite": "^4.5.0",
     "vue-eslint-parser": "^9.3.2",
-    "vue-tsc": "^1.8.19"
+    "vue-tsc": "^1.8.22"
   },
   "dependencies": {
-    "vue": "^3.3.4"
+    "vue": "^3.3.7"
   }
 }

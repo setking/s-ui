@@ -37,7 +37,7 @@
     "types": [],
     // 路径别名设置
     "paths": {
-      "@sui/*": ["packages/*/src", "packages/component/*/src"]
+      "@sui/*": ["packages/*/src"]
     }
   }
 }

@@ -1,61 +1,41 @@
 (function(global, factory) {
-  typeof exports === "object" && typeof module !== "undefined" ? factory(exports, require("vue"), require("lodash")) : typeof define === "function" && define.amd ? define(["exports", "vue", "lodash"], factory) : (global = typeof globalThis !== "undefined" ? globalThis : global || self, factory(global.suiUi = {}, global.vue, global.lodash));
-})(this, function(exports2, vue, lodash) {
+  typeof exports === "object" && typeof module !== "undefined" ? factory(exports, require("@sui/button"), require("@sui/utils"), require("@sui/styles"), require("@sui/config-provider"), require("@sui/input")) : typeof define === "function" && define.amd ? define(["exports", "@sui/button", "@sui/utils", "@sui/styles", "@sui/config-provider", "@sui/input"], factory) : (global = typeof globalThis !== "undefined" ? globalThis : global || self, factory(global.suiui = {}, global.button, global.utils, global.styles, global.configProvider, global.input));
+})(this, function(exports2, button, utils, styles, configProvider, input) {
   "use strict";
-  function hello(to = "World") {
-    const txt = `Hello ${to}`;
-    console.log(txt);
-    return txt;
-  }
-  function useLodash() {
-    return lodash;
-  }
-  const _sfc_main$1 = /* @__PURE__ */ vue.defineComponent({
-    __name: "index",
-    props: {
-      text: { default: "World" }
-    },
-    setup(__props) {
-      const props = __props;
-      function clickHandler() {
-        hello(props.text);
-      }
-      return (_ctx, _cache) => {
-        return vue.openBlock(), vue.createElementBlock("button", {
-          class: "open-button",
-          onClick: clickHandler
-        }, [
-          vue.renderSlot(_ctx.$slots, "default")
-        ]);
-      };
-    }
+  Object.keys(button).forEach((k) => {
+    if (k !== "default" && !Object.prototype.hasOwnProperty.call(exports2, k))
+      Object.defineProperty(exports2, k, {
+        enumerable: true,
+        get: () => button[k]
+      });
   });
-  const _hoisted_1 = ["value"];
-  const _sfc_main = /* @__PURE__ */ vue.defineComponent({
-    __name: "index",
-    props: {
-      modeVal: { default: "" }
-    },
-    emits: ["update:modeVal"],
-    setup(__props, { emit }) {
-      function inputHandler(e) {
-        const value = e.target.value;
-        emit("update:modeVal", value);
-        hello(value);
-      }
-      return (_ctx, _cache) => {
-        return vue.openBlock(), vue.createElementBlock("input", {
-          type: "text",
-          class: "open-input",
-          value: _ctx.modeVal,
-          onInput: inputHandler
-        }, null, 40, _hoisted_1);
-      };
-    }
+  Object.keys(utils).forEach((k) => {
+    if (k !== "default" && !Object.prototype.hasOwnProperty.call(exports2, k))
+      Object.defineProperty(exports2, k, {
+        enumerable: true,
+        get: () => utils[k]
+      });
   });
-  exports2.Button = _sfc_main$1;
-  exports2.Input = _sfc_main;
-  exports2.hello = hello;
-  exports2.useLodash = useLodash;
+  Object.keys(styles).forEach((k) => {
+    if (k !== "default" && !Object.prototype.hasOwnProperty.call(exports2, k))
+      Object.defineProperty(exports2, k, {
+        enumerable: true,
+        get: () => styles[k]
+      });
+  });
+  Object.keys(configProvider).forEach((k) => {
+    if (k !== "default" && !Object.prototype.hasOwnProperty.call(exports2, k))
+      Object.defineProperty(exports2, k, {
+        enumerable: true,
+        get: () => configProvider[k]
+      });
+  });
+  Object.keys(input).forEach((k) => {
+    if (k !== "default" && !Object.prototype.hasOwnProperty.call(exports2, k))
+      Object.defineProperty(exports2, k, {
+        enumerable: true,
+        get: () => input[k]
+      });
+  });
   Object.defineProperty(exports2, Symbol.toStringTag, { value: "Module" });
 });

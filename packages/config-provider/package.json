@@ -1,0 +1,27 @@
+{
+  "name": "@sui/config-provider",
+  "version": "1.0.0",
+  "main": "./dist/.umd.js",
+  "module": "./dist/sui-config-provider.mjs",
+  "types": "./dist/src/index.d.ts",
+  "scripts": {
+    "build": "vite build ",
+    "test": "echo test"
+  },
+  "exports": {
+    ".": {
+      "require": "./dist/.umd.js",
+      "import": "./dist/sui-config-provider.mjs",
+      "types": "./dist/src/index.d.ts"
+    },
+    "./*": "./*",
+    "./style.css": "./dist/style.css"
+  },
+  "peerDependencies": {
+    "vue": ">=3.0.0"
+  },
+  "dependencies": {
+    "@sui/styles": "workspace:^",
+    "@sui/utils": "workspace:^"
+  }
+}

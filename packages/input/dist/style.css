@@ -1,0 +1,157 @@
+/* stylelint-disable selector-class-pattern */
+.op-input {
+  box-sizing: border-box;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  padding: var(--op-input-padding-y) var(--op-input-padding-x);
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 1;
+  color: var(--op-input-color);
+  text-align: center;
+  white-space: nowrap;
+  user-select: none;
+  background-color: var(--op-input-bg-color);
+  border-color: var(--op-input-border-color);
+  border-style: solid;
+  border-width: 1px;
+  border-radius: 2px;
+  outline: none;
+}
+.op-input.op-input--primary {
+  --op-input-color: rgb(var(--op-color-reverse));
+  --op-input-bg-color: rgb(var(--op-color-primary));
+  --op-input-border-color: rgb(var(--op-color-primary));
+  --op-input-hover-color: rgb(var(--op-color-reverse));
+  --op-input-hover-bg-color: rgb(var(--op-color-primary-light-3));
+  --op-input-hover-border-color: rgb(var(--op-color-primary-light-3));
+  --op-input-active-color: rgb(var(--op-color-reverse));
+  --op-input-active-bg-color: rgb(var(--op-color-primary-dark-2));
+  --op-input-active-border-color: rgb(var(--op-color-primary-dark-2));
+  --op-input-disabled-color: rgb(var(--op-color-reverse));
+  --op-input-disabled-bg-color: rgb(var(--op-color-primary-light-5));
+  --op-input-disabled-border-color: rgb(var(--op-color-primary-light-5));
+}
+.op-input.op-input--success {
+  --op-input-color: rgb(var(--op-color-reverse));
+  --op-input-bg-color: rgb(var(--op-color-success));
+  --op-input-border-color: rgb(var(--op-color-success));
+  --op-input-hover-color: rgb(var(--op-color-reverse));
+  --op-input-hover-bg-color: rgb(var(--op-color-success-light-3));
+  --op-input-hover-border-color: rgb(var(--op-color-success-light-3));
+  --op-input-active-color: rgb(var(--op-color-reverse));
+  --op-input-active-bg-color: rgb(var(--op-color-success-dark-2));
+  --op-input-active-border-color: rgb(var(--op-color-success-dark-2));
+  --op-input-disabled-color: rgb(var(--op-color-reverse));
+  --op-input-disabled-bg-color: rgb(var(--op-color-success-light-5));
+  --op-input-disabled-border-color: rgb(var(--op-color-success-light-5));
+}
+.op-input.op-input--warning {
+  --op-input-color: rgb(var(--op-color-reverse));
+  --op-input-bg-color: rgb(var(--op-color-warning));
+  --op-input-border-color: rgb(var(--op-color-warning));
+  --op-input-hover-color: rgb(var(--op-color-reverse));
+  --op-input-hover-bg-color: rgb(var(--op-color-warning-light-3));
+  --op-input-hover-border-color: rgb(var(--op-color-warning-light-3));
+  --op-input-active-color: rgb(var(--op-color-reverse));
+  --op-input-active-bg-color: rgb(var(--op-color-warning-dark-2));
+  --op-input-active-border-color: rgb(var(--op-color-warning-dark-2));
+  --op-input-disabled-color: rgb(var(--op-color-reverse));
+  --op-input-disabled-bg-color: rgb(var(--op-color-warning-light-5));
+  --op-input-disabled-border-color: rgb(var(--op-color-warning-light-5));
+}
+.op-input.op-input--danger {
+  --op-input-color: rgb(var(--op-color-reverse));
+  --op-input-bg-color: rgb(var(--op-color-danger));
+  --op-input-border-color: rgb(var(--op-color-danger));
+  --op-input-hover-color: rgb(var(--op-color-reverse));
+  --op-input-hover-bg-color: rgb(var(--op-color-danger-light-3));
+  --op-input-hover-border-color: rgb(var(--op-color-danger-light-3));
+  --op-input-active-color: rgb(var(--op-color-reverse));
+  --op-input-active-bg-color: rgb(var(--op-color-danger-dark-2));
+  --op-input-active-border-color: rgb(var(--op-color-danger-dark-2));
+  --op-input-disabled-color: rgb(var(--op-color-reverse));
+  --op-input-disabled-bg-color: rgb(var(--op-color-danger-light-5));
+  --op-input-disabled-border-color: rgb(var(--op-color-danger-light-5));
+}
+.op-input.op-input--info {
+  --op-input-color: rgb(var(--op-color-reverse));
+  --op-input-bg-color: rgb(var(--op-color-info));
+  --op-input-border-color: rgb(var(--op-color-info));
+  --op-input-hover-color: rgb(var(--op-color-reverse));
+  --op-input-hover-bg-color: rgb(var(--op-color-info-light-3));
+  --op-input-hover-border-color: rgb(var(--op-color-info-light-3));
+  --op-input-active-color: rgb(var(--op-color-reverse));
+  --op-input-active-bg-color: rgb(var(--op-color-info-dark-2));
+  --op-input-active-border-color: rgb(var(--op-color-info-dark-2));
+  --op-input-disabled-color: rgb(var(--op-color-reverse));
+  --op-input-disabled-bg-color: rgb(var(--op-color-info-light-5));
+  --op-input-disabled-border-color: rgb(var(--op-color-info-light-5));
+}
+.op-input.op-input--plain {
+  --op-input-hover-color: rgb(var(--op-color-primary));
+  --op-input-hover-bg-color: rgb(var(--op-color-card));
+  --op-input-hover-border-color: rgb(var(--color-primary));
+}
+.op-input.op-input--plain.op-input--primary {
+  --op-input-color: rgb(var(--op-color-primary));
+  --op-input-bg-color: rgb(var(--op-color-primary-light-9));
+  --op-input-border-color: rgb(var(--op-color-primary-light-5));
+  --op-input-hover-color: rgb(var(--op-color-reverse));
+  --op-input-hover-bg-color: rgb(var(--op-color-primary));
+  --op-input-hover-border-color: rgb(var(--op-color-primary));
+  --op-input-disabled-color: rgb(var(--op-color-primary-light-5));
+  --op-input-disabled-bg-color: rgb(var(--op-color-primary-light-9));
+  --op-input-disabled-border-color: rgb(var(--op-color-primary-light-8));
+}
+.op-input.op-input--plain.op-input--success {
+  --op-input-color: rgb(var(--op-color-success));
+  --op-input-bg-color: rgb(var(--op-color-success-light-9));
+  --op-input-border-color: rgb(var(--op-color-success-light-5));
+  --op-input-hover-color: rgb(var(--op-color-reverse));
+  --op-input-hover-bg-color: rgb(var(--op-color-success));
+  --op-input-hover-border-color: rgb(var(--op-color-success));
+  --op-input-disabled-color: rgb(var(--op-color-success-light-5));
+  --op-input-disabled-bg-color: rgb(var(--op-color-success-light-9));
+  --op-input-disabled-border-color: rgb(var(--op-color-success-light-8));
+}
+.op-input.op-input--plain.op-input--warning {
+  --op-input-color: rgb(var(--op-color-warning));
+  --op-input-bg-color: rgb(var(--op-color-warning-light-9));
+  --op-input-border-color: rgb(var(--op-color-warning-light-5));
+  --op-input-hover-color: rgb(var(--op-color-reverse));
+  --op-input-hover-bg-color: rgb(var(--op-color-warning));
+  --op-input-hover-border-color: rgb(var(--op-color-warning));
+  --op-input-disabled-color: rgb(var(--op-color-warning-light-5));
+  --op-input-disabled-bg-color: rgb(var(--op-color-warning-light-9));
+  --op-input-disabled-border-color: rgb(var(--op-color-warning-light-8));
+}
+.op-input.op-input--plain.op-input--danger {
+  --op-input-color: rgb(var(--op-color-danger));
+  --op-input-bg-color: rgb(var(--op-color-danger-light-9));
+  --op-input-border-color: rgb(var(--op-color-danger-light-5));
+  --op-input-hover-color: rgb(var(--op-color-reverse));
+  --op-input-hover-bg-color: rgb(var(--op-color-danger));
+  --op-input-hover-border-color: rgb(var(--op-color-danger));
+  --op-input-disabled-color: rgb(var(--op-color-danger-light-5));
+  --op-input-disabled-bg-color: rgb(var(--op-color-danger-light-9));
+  --op-input-disabled-border-color: rgb(var(--op-color-danger-light-8));
+}
+.op-input.op-input--plain.op-input--info {
+  --op-input-color: rgb(var(--op-color-info));
+  --op-input-bg-color: rgb(var(--op-color-info-light-9));
+  --op-input-border-color: rgb(var(--op-color-info-light-5));
+  --op-input-hover-color: rgb(var(--op-color-reverse));
+  --op-input-hover-bg-color: rgb(var(--op-color-info));
+  --op-input-hover-border-color: rgb(var(--op-color-info));
+  --op-input-disabled-color: rgb(var(--op-color-info-light-5));
+  --op-input-disabled-bg-color: rgb(var(--op-color-info-light-9));
+  --op-input-disabled-border-color: rgb(var(--op-color-info-light-8));
+}
+.op-input.op-input--disabled, .op-input.op-input--disabled:hover {
+  color: var(--op-input-disabled-color);
+  cursor: not-allowed;
+  background-color: var(--op-input-disabled-bg-color);
+  border-color: var(--op-input-disabled-border-color);
+}  

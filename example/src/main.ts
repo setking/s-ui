@@ -1,4 +1,10 @@
 import { createApp } from 'vue';
+import { Theme } from '@sui/ui';
 import App from './app.vue';
+import 'virtual:uno.css';
 
-createApp(App).mount('#app');
+const app = createApp(App);
+
+app.use(Theme);
+
+app.mount('#app');
